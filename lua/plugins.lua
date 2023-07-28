@@ -40,6 +40,7 @@ return require("packer").startup(
 --    use {'neoclide/coc.nvim', branch = 'release'}
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
+    -- use 'airblade/vim-gitgutter'
     end
 )
 

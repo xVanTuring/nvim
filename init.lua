@@ -13,37 +13,9 @@ vim.o.termguicolors = true
 
 require('plugins')
 
-
-
-
-require('nvim-tree').setup()
-local c = require('vscode.colors').get_colors()
-require('vscode').setup({
-    -- Alternatively set style in setup
-    -- style = 'light'
-
-    -- Enable transparent background
-    transparent = true,
-
-    -- Enable italic comment
-    italic_comments = true,
-
-    -- Disable nvim-tree background color
-    disable_nvimtree_bg = true,
-
-    -- Override colors (see ./lua/vscode/colors.lua)
-    color_overrides = {
-        vscLineNumber = '#FFFFFF',
-    },
-
-    -- Override highlight groups (see ./lua/vscode/theme.lua)
-    group_overrides = {
-        -- this supports the same val table as vim.api.nvim_set_hl
-        -- use colors from this colorscheme by requiring vscode.colors!
-        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
-    }
-})
-require('vscode').load()
+require('nvim-tree-config')
+require('vscode-colors-config')
+require('gitsigns-config')
 
 require('lualine').setup({
     options = {
@@ -60,10 +32,7 @@ vim.g.blamer_enabled = 1
 vim.g.blamer_prefix = ' > '
 
 -- Telescope
-require('telescope').setup{ 
-  defaults = { 
-  }
-}
+require('telescope').setup{}
 -- barbar
 vim.g.barbar_auto_setup = false
 
@@ -83,4 +52,9 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- Nvim-Tree
+local nvim_tree_api = require("nvim-tree.api")
+vim.keymap.set('n', '<leader>e', nvim_tree_api.tree.toggle, {})
+
+
 
