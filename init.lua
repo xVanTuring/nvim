@@ -32,7 +32,13 @@ vim.g.blamer_enabled = 1
 vim.g.blamer_prefix = ' > '
 
 -- Telescope
-require('telescope').setup{}
+require('telescope').setup{
+    pickers = {
+        find_files = {
+            theme = "dropdown",
+        }
+    },
+}
 -- barbar
 vim.g.barbar_auto_setup = false
 
