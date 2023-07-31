@@ -16,6 +16,8 @@ require('plugins')
 require('nvim-tree-config')
 require('vscode-colors-config')
 require('gitsigns-config')
+require("dap-cs")
+require("dapui-config")
 
 require('lualine').setup({
     options = {
@@ -58,6 +60,9 @@ require('possession').setup {
 }
 require('telescope').load_extension('possession')
 
+require("breadcrumb").init()
+
+
 -- Keymappers
 vim.g.mapleader = ' '
 -- Telescope
@@ -70,4 +75,5 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- Nvim-Tree
 local nvim_tree_api = require("nvim-tree.api")
 vim.keymap.set('n', '<leader>t', nvim_tree_api.tree.toggle, {})
+
 

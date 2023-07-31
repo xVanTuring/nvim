@@ -46,6 +46,9 @@ function()
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
+        "mfussenegger/nvim-dap",
+        "jay-babu/mason-nvim-dap.nvim",
+        "rcarriga/nvim-dap-ui",
     }
     use {
         "hrsh7th/nvim-cmp",
@@ -55,6 +58,7 @@ function()
         "L3MON4D3/LuaSnip",
         tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     })
+    use("loctvl842/breadcrumb.nvim")
 end
 )
 
