@@ -49,6 +49,8 @@ function()
         "mfussenegger/nvim-dap",
         "jay-babu/mason-nvim-dap.nvim",
         "rcarriga/nvim-dap-ui",
+        "nvim-telescope/telescope-dap.nvim",
+        "HUAHUAI23/telescope-dapzzzz",
     }
     use {
         "hrsh7th/nvim-cmp",

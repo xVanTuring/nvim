@@ -18,6 +18,7 @@ require('vscode-colors-config')
 require('gitsigns-config')
 require("dap-cs")
 require("dapui-config")
+require("dap-config")
 
 require('lualine').setup({
     options = {
