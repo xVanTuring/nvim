@@ -20,11 +20,6 @@ require("dap-cs")
 require("dapui-config")
 require("dap-config")
 
-require('lualine').setup({
-    options = {
-        theme = 'vscode',
-    },
-})
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
     show_current_context = true,
@@ -45,7 +40,7 @@ require('telescope').setup{
 -- barbar
 vim.g.barbar_auto_setup = false
 
-require'barbar'.setup{
+ require'barbar'.setup{
     animation = false,
     sidebar_filetypes = {
         NvimTree = true,
@@ -54,13 +49,8 @@ require'barbar'.setup{
 
 require('mason-config')
 require('cmp-config')
-
--- Possession
-require('possession').setup {
-
-}
-require('telescope').load_extension('possession')
-
+require('lua-line-config')
+require('auto-session-config')
 require("breadcrumb").init()
 
 

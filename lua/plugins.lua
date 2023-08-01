@@ -10,7 +10,7 @@ function()
     use "lukas-reineke/indent-blankline.nvim"
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+   --     run = ':TSUpdate'
     }
     use "APZelos/blamer.nvim"
     use {
@@ -27,7 +27,7 @@ function()
             "nvim-telescope/telescope.nvim",
             "nvim-lua/plenary.nvim",
         },
-        config = function() 
+        config = function()
             require("telescope").load_extension("lazygit")
         end,
     })
@@ -61,6 +61,9 @@ function()
         tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     })
     use("loctvl842/breadcrumb.nvim")
+    use{
+        'rmagatti/auto-session',
+    }
 end
 )
 
