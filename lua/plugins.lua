@@ -15,7 +15,9 @@ return require("packer").startup(
         use "APZelos/blamer.nvim"
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.2',
-            requires = { { 'nvim-lua/plenary.nvim' } }
+            requires = {
+                { 'nvim-lua/plenary.nvim' },
+            }
         }
 
         use 'lewis6991/gitsigns.nvim'
@@ -51,6 +53,7 @@ return require("packer").startup(
             "rcarriga/nvim-dap-ui",
             "nvim-telescope/telescope-dap.nvim",
             "HUAHUAI23/telescope-dapzzzz",
+            "folke/trouble.nvim"
         }
         use {
             "hrsh7th/nvim-cmp",
@@ -68,5 +71,20 @@ return require("packer").startup(
             "windwp/nvim-autopairs",
             config = function() require("nvim-autopairs").setup {} end
         }
+        use {
+            'numToStr/Comment.nvim',
+            config = function()
+                require('Comment').setup()
+            end
+        }
+        use({
+            "nvim-telescope/telescope-live-grep-args.nvim",
+            requires = {
+                "nvim-telescope/telescope.nvim",
+            },
+            config = function()
+                require("telescope").load_extension("live_grep_args")
+            end,
+        })
     end
 )
