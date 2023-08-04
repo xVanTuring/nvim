@@ -30,7 +30,7 @@ vim.g.blamer_enabled = 1
 vim.g.blamer_prefix = ' > '
 
 -- Telescope
-require('telescope').setup{
+require('telescope').setup {
     pickers = {
         find_files = {
             theme = "dropdown",
@@ -40,7 +40,7 @@ require('telescope').setup{
 -- barbar
 vim.g.barbar_auto_setup = false
 
- require'barbar'.setup{
+require 'barbar'.setup {
     animation = false,
     sidebar_filetypes = {
         NvimTree = true,
@@ -63,8 +63,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fs', telescope.extensions.possession.list, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', "==", "<Cmd>Format<CR>", {});
 -- Nvim-Tree
 local nvim_tree_api = require("nvim-tree.api")
 vim.keymap.set('n', '<leader>t', nvim_tree_api.tree.toggle, {})
-
-

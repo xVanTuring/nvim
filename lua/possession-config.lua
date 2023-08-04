@@ -1,4 +1,3 @@
-
 -- Possession
 require('possession').setup {
     commands = {
