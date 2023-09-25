@@ -37,8 +37,9 @@ cmp.setup {
         end, { 'i', 's' }),
     }),
     sources = {
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'luasnip',option = { show_autosnippets = true }},
         { name = 'nvim_lsp' },
-        { name = 'luasnip' },
     },
 }
 cmp.event:on(

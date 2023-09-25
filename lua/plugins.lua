@@ -2,17 +2,20 @@
 
 return require("packer").startup(
     function()
-        use "wbthomason/packer.nvim"
-        use "Mofiqul/vscode.nvim"
-        use "nvim-tree/nvim-tree.lua"
-        use "nvim-tree/nvim-web-devicons"
-        use "nvim-lualine/lualine.nvim"
-        use "lukas-reineke/indent-blankline.nvim"
         use {
+            "wbthomason/packer.nvim",
+            "Mofiqul/vscode.nvim",
+            "nvim-tree/nvim-tree.lua",
+            "nvim-tree/nvim-web-devicons",
+            "nvim-lualine/lualine.nvim",
+            "lukas-reineke/indent-blankline.nvim",
             'nvim-treesitter/nvim-treesitter',
-            --     run = ':TSUpdate'
+            "APZelos/blamer.nvim",
+            'lewis6991/gitsigns.nvim',
+            'romgrk/barbar.nvim',
+            "loctvl842/breadcrumb.nvim",
+            'rmagatti/auto-session',
         }
-        use "APZelos/blamer.nvim"
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.2',
             requires = {
@@ -20,8 +23,6 @@ return require("packer").startup(
             }
         }
 
-        use 'lewis6991/gitsigns.nvim'
-        use 'romgrk/barbar.nvim'
         use({
             "kdheepak/lazygit.nvim",
             -- optional for floating window border decoration
@@ -53,19 +54,15 @@ return require("packer").startup(
             "rcarriga/nvim-dap-ui",
             "nvim-telescope/telescope-dap.nvim",
             "HUAHUAI23/telescope-dapzzzz",
-            "folke/trouble.nvim"
+            "folke/trouble.nvim",
+            "folke/lsp-colors.nvim"
         }
         use {
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-nvim-lsp",
-        }
-        use({
             "L3MON4D3/LuaSnip",
-            tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        })
-        use("loctvl842/breadcrumb.nvim")
-        use {
-            'rmagatti/auto-session',
+            'saadparwaiz1/cmp_luasnip',
+            "hrsh7th/cmp-nvim-lsp-signature-help",
         }
         use {
             "windwp/nvim-autopairs",

@@ -8,8 +8,8 @@ local function pre_save_session()
 end
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions,globals"
 require('auto-session').setup {
-    pre_save_cmds = { pre_save_session, "NvimTreeClose" }, -- "NvimTreeClose"
-    post_restore_cmds = { "NvimTreeOpen" },                --"NvimTreeOpen"
+    pre_save_cmds = { pre_save_session, "NvimTreeClose","TroubleClose" }, -- "NvimTreeClose"
+    -- post_restore_cmds = { "NvimTreeOpen" },                --"NvimTreeOpen"
     log_level = "error",
     auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
 }

@@ -1,13 +1,12 @@
--- Mason
+-- Mason not loaded
 local servers = {
     jedi_language_server = {},
-    pyright = {},
     lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
             diagnostics = {
-                globals = { "vim" },
+                globals = { "vim", "use" },
             },
         },
     },
