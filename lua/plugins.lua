@@ -10,11 +10,11 @@ return require("packer").startup(
             "nvim-lualine/lualine.nvim",
             "lukas-reineke/indent-blankline.nvim",
             'nvim-treesitter/nvim-treesitter',
-            "APZelos/blamer.nvim",
             'lewis6991/gitsigns.nvim',
             'romgrk/barbar.nvim',
             "loctvl842/breadcrumb.nvim",
             'rmagatti/auto-session',
+            'f-person/git-blame.nvim'
         }
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.2',

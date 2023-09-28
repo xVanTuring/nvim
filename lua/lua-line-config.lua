@@ -5,9 +5,8 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 require('lualine').setup({
     options = {
         theme = 'vscode',
+        -- disabled_filetypes = { 'packer', 'NvimTree', 'Trouble' },
     },
     sections = { lualine_c = { require('auto-session.lib').current_session_name } },
-    -- disabled_filetypes = { 'packer', 'NvimTree', 'NvimTree_1' },
-    extensions = { 'nvim-tree', 'nvim-dap-ui' },
-    -- sections = { lualine_a = { session_name } }
+    extensions = { "trouble", "nvim-tree", "nvim-dap-ui" }
 })
